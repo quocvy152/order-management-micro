@@ -5,7 +5,7 @@ import { ClientProxy } from '@nestjs/microservices';
 export class AppService {
   constructor(@Inject('RABBITMQ_SERVICE') private readonly client: ClientProxy) {}
 
-  sendUserCreatedEvent(user: any) {
-    this.client.emit('user_created', user);
+  async createOrder(user: any) {
+    
   }
 }
